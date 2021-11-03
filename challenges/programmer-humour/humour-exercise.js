@@ -5,10 +5,11 @@ function getImage() {
       .then((data) => {
         let imageContainer = document.getElementById("img-div");
         let image = document.createElement("img");
-        image.setAttribute("src", data.img);
+        image.src = data.img;
         imageContainer.appendChild(image);
-      })
-      .catch((error) => console.log(error));
+        console.log(data.img)
+      }).catch((error) => console.log(error));
 }
+
 
 getImage();
